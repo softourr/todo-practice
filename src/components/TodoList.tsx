@@ -4,8 +4,8 @@ import TodoListItem from "./TodoListItem";
 
 type TTodoListProps = {
   todos: TTodo[];
-  onToggle: (id: number) => void;
-  onDelete: (id: number) => void;
+  onToggle: (id: string) => void;
+  onDelete: (id: string) => void;
 };
 const TodoList = (props: TTodoListProps) => {
   const { todos, onToggle, onDelete } = props;

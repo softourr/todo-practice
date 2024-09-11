@@ -3,8 +3,8 @@ import Checkbox from "./html/Checkbox";
 import { TTodo } from "./Todo";
 interface TodoListItemProps {
   todo: TTodo;
-  onToggle: (id: number) => void;
-  onDelete: (id: number) => void;
+  onToggle: (id: string) => void;
+  onDelete: (id: string) => void;
 }
 
 const TodoListItem = ({ todo, onToggle, onDelete }: TodoListItemProps) => {

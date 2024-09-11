@@ -4,7 +4,7 @@ import TodoList from "./TodoList";
 import { v4 as uuidv4 } from "uuid";
 
 export type TTodo = {
-  id: number;
+  id: string;
   text: string;
   completed: boolean;
 };
@@ -24,12 +24,7 @@ const Todo = () => {
 
   // Toggle
   //메모추가
-  const toggleTodo = useCallback((id: number) => {
-    // completed 상태를 업데이트할 id
-    // 재병합해서 새로 추가된 인자로 업데이트된다 덮어쓰기 된다
-    // setTodos( 오류코드
-    //   todos.map((todos) =>
-    //     todo.id === id ? { ...todo, completed: !todo.completed } : todo
+  const toggleTodo = useCallback((id: string) => {
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
@@ -37,7 +32,7 @@ const Todo = () => {
     );
   }, []);
   // Delete
-  const deleteTodo = useCallback((id: number) => {
+  const deleteTodo = useCallback((id: string) => {
     setTodos((prevTodos) => {
       // 현재 삭제 요청된 todo.id를 제외한 나머지만 남도록 필터링한다
       const filteredTodos = prevTodos.filter((todo) => todo.id !== id);
