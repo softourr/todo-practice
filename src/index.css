@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #8c8c8c;
+  background : url(/public/gray.jpg) no-repeat center center fixed;
+}
+
+.todo-bg{
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
